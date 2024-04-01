@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Food, LLC</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<style>
+.container {
+  display: inline-block;
+  cursor: pointer;
+}
+
+.bar1, .bar2, .bar3 {
+  width: 35px;
+  height: 5px;
+  background-color: #333;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+.change .bar1 {
+  transform: translate(0, 11px) rotate(-45deg);
+}
+
+.change .bar2 {opacity: 0;}
+
+.change .bar3 {
+  transform: translate(0, -11px) rotate(45deg);
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
+  margin-top: 50px;
+}
+
+.navbar {
+  border-radius: 0;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: #333;
+}
+
+.navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover {
+  background-color: transparent;
+}
+
+.page-heading {
+  margin-top: 50px;
+}
+
+.main-content {
+  background-color: #fff;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+</style>
+</head>
+<body>
+
+<nav class="navbar navbar-default">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#menu-dropdown" aria-expanded="false" onclick="toggleMenu(this)">
+        <div class="container">
+          <div class="bar1"></div>
+          <div class="bar2"></div>
+          <div class="bar3"></div>
+        </div>
+      </button>
+      <a class="navbar-brand" href="#">Food</a>
+    </div>
+
+    <div id="menu-dropdown" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li><a href="#chicken">Chicken</a></li>
+        <li><a href="#beef">Beef</a></li>
+        <li><a href="#sushi">Sushi</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container text-center">
+  <h1 class="page-heading">Our Menu</h1>
+</div>
+
+<section id="chicken" class="main-content">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+        <h3 class="text-center">Chicken</h3>
+        <p>Le meilleur chicken fries que vous allez goûter.</p>
+        <a href="#top">Back to Top</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="beef" class="main-content">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+        <h3 class="text-center">Beef</h3>
+        <p>Le meilleur filet de bœuf que vous allez goûter.</p>
+        <a href="#top">Back to Top</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="sushi" class="main-content">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+        <h3 class="text-center">Sushi</h3>
+        <p>Le meilleur sushi que vous allez goûter.</p>
+        <a href="#top">Back to Top</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+function toggleMenu(x) {
+  x.classList.toggle("change");
+  var menuDropdown = document.getElementById("menu-dropdown");
+  if (menuDropdown.classList.contains("collapse")) {
+    menuDropdown.classList.remove("collapse");
+  } else {
+    menuDropdown.classList.add("collapse");
+  }
+}
+
+
+</script>
+
+</body>
+</html>
